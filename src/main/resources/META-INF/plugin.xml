@@ -1,0 +1,32 @@
+<idea-plugin>
+    <id>moe.lemonneko.fabricdev.fabricdev</id>
+    <name>FabricDev</name>
+    <vendor email="chheese048@gmail.com" url="https://blog.lemonneko.moe">LemonNeko</vendor>
+
+    <description><![CDATA[
+    This plugin can help you create Fabric Minecraft Mod Project
+    ]]></description>
+
+    <change-notes><![CDATA[
+    <ul>
+        <li>New - Added project create wizard.</li>
+        <li>Problem - Sometimes Gradle importing may be failed.Just close the project and reimport it.</li>
+    </ul>
+    ]]></change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.modules.gradle.java</depends>
+    <depends>org.intellij.groovy</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <facetType implementation="moe.lemonneko.fabricdev.module.facet.FabricFacetType"/>
+        <moduleType id="FABRIC_MODULE" implementationClass="moe.lemonneko.fabricdev.module.FabricModuleType"/>
+        <moduleBuilder builderClass="moe.lemonneko.fabricdev.module.FabricModuleBuilder"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
