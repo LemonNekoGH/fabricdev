@@ -27,6 +27,11 @@
     </extensions>
 
     <actions>
-        <!-- Add your actions here -->
+        <group class="moe.lemonneko.fabricdev.actions.NekoActionGroup" id="NekoActions" text="Fabric Develop" icon="/assets/icons/Fabric.png">
+            <add-to-group group-id="NewGroup"/>
+        </group>
+        <action id="Test" class="moe.lemonneko.fabricdev.actions.NewItem" text="New Item" description="No description">
+            <add-to-group group-id="NekoActions"/>
+        </action>
     </actions>
 </idea-plugin>
